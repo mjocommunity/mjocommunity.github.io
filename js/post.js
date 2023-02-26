@@ -1,7 +1,7 @@
 function renderPost() {
 	let params = new URLSearchParams(window.location.search);
 	let id = params.get('id');
-	fetch(`/posts/${id}.md`, options)
+	fetch(`/posts/${id}.md`)
 		.then((response) => response.text())
 		.then((data) => {
 			let post_body = document.getElementById('post_body');
